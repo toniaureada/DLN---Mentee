@@ -28,12 +28,12 @@
     <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfdEGMWQeyS37Y3Uz8rETnXXqm-iZy3fJ62Dh7wp87stclHGA/formResponse" method="post"  target="hidden_frame">
         <div class="Form-element">
             <span>First Name</span>
-            <input autocomplete="off" id="fname"  type="text" name="entry.1879481761" placeholder="Type your first name" class="form-control" required> 
+            <input autocomplete="off" id="fname"  type="text" name="entry.1879481761" placeholder="YOUR FIRST NAME" class="form-control" required> 
 
         </div>
         <div class="Form-element">
             <span>Last Name</span>
-            <input autocomplete="off" id="lname" type="text" name="entry.1538595492" placeholder="Type your last name" class="form-control"  required> 
+            <input autocomplete="off" id="lname" type="text" name="entry.1538595492" placeholder="YOUR LAST NAME" class="form-control"  required> 
 
         </div>
 
@@ -44,7 +44,7 @@
         </div>
         <div class="Form-element">
             <span>Phone?</span>
-            <input autocomplete="off" id="timezone" id="timezone"  type="text" name="entry.1647705237" placeholder="Your contact number" class="form-control"  required> 
+            <input autocomplete="off" id="phone" type="text" name="entry.1647705237" placeholder="Your contact number" class="form-control"  required> 
 
         </div>
 
@@ -309,12 +309,12 @@
         
         <div class="Form-element">
             <span>Availability in hours per week</span>
-            <input autocomplete="off" id="cal" type="text" name="entry.583042822" placeholder="12 to 3PM till monday to friday" class="form-control"  required> 
+            <input autocomplete="off" id="cal1" type="text" name="entry.583042822" placeholder="12 to 3PM till monday to friday" class="form-control"  required> 
 
         </div>
         <div class="Form-element">
             <span>Timezone</span>
-            <input autocomplete="off" id="cal" type="text" name="entry.1005726337" placeholder="Eg. EST, PST, GMT + 13, etc " class="form-control"  required> 
+            <input autocomplete="off" id="cal2" type="text" name="entry.1005726337" placeholder="Eg. EST, PST, GMT + 13, etc " class="form-control"  required> 
 
         </div>
     </div>
@@ -329,19 +329,18 @@
 
 <script>
 
-
     $("#submit").click(function(){
 
     var fname = $("#fname").val();
     var lname = $("#lname").val();
     var email = $("#email").val();
-    var timezone = $("timezone").val();
-    var avail = $("#avail").val();
-    var bio = $("#bio").val();
-    var cb = $("#cb").val();
+    var phone = $("#phone").val();
+    var country = $("#avail").val();
+    var availa = $("#cal1").val();
+    var Tz = $("#cal2").val();
 
     
-    if (fname ==''||lname==''||email==''||timezone==''||avail==''||bio==''){
+    if (fname ==''||lname ==''||email ==''||phone ==''||country ==''||availa==''||Tz==''){
         swal({
   title: "Fields Empty!",
   text: "Please check the missing field!",
