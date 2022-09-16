@@ -39,12 +39,12 @@
 
         <div class="Form-element">
             <span>Email</span>
-            <input autocomplete="off" id="email" type="email" name="entry.272735862" placeholder="YOUR EMAIL" class="form-control"  required> 
+            <input autocomplete="off" id="email" type="email" name="entry.272735862" placeholder="YOUR EMAIL ADDRESS" class="form-control"  required> 
 
         </div>
         <div class="Form-element">
             <span>Phone?</span>
-            <input autocomplete="off" id="phone" type="text" name="entry.1647705237" placeholder="Your contact number" class="form-control"  required> 
+            <input autocomplete="off" id="phone" type="text" name="entry.1647705237" placeholder="YOUR CONTACT NUMBER" class="form-control"  required> 
 
         </div>
 
@@ -297,7 +297,7 @@
         
         <div class="Form-element">
             <span>Availability in hours per week</span>
-            <input autocomplete="off" id="cal1" type="text" name="entry.583042822" placeholder="How many times in a week are you going to be available" class="form-control"  required> 
+            <input autocomplete="off" id="cal1" type="text" name="entry.583042822" placeholder="HOW MANY HOURS IN A WEEK ARE YOU AVAILABLE" class="form-control"  required> 
 
         </div>
         <div class="Form-element">
@@ -308,14 +308,106 @@
     </div>
     <div class="Form-element">
         <span>Can you tell me a little bit more about the main issue you’d like to focus on/work on?</span>
-        <textarea type="text" id="bio4" name="entry.1880868558" placeholder="a brief list, such as relationships, money, fitness, etc...." class="form-control"  style="height: 200px;" required></textarea>
+        <textarea type="text" id="bio4" name="entry.1880868558" placeholder="a brief list, such as relationships, money, fitness, etc...." class="form-control"  style="height: 100px;" required></textarea>
     </div>
     </div>
 
 
 
     <hr>
-        <button type="submit" onclick="myFunction()" id="submit" data-toggle="modal" data-target=".bd-example-modal-lg" name="submit_change">Submit your application</button>
+       
+    <a href="#" id="mySizeChart">Please read the following terms and conditions</a>
+    
+    <div id="mySizeChartModal" class="ebcf_modal">
+    
+      <div class="ebcf_modal-content">
+        <span class="ebcf_close">&times;</span>
+
+      <p>This Agreement is entered by and between Pure Spiritual Intelligence Inc. and your name, the Coachee, whereby you agree to receive a one-hour FREE coaching session with one of our DreamLife and Pure Coaches.</p>
+
+
+      <p>★<span id="men">Description of Coaching</span><br>
+        Coaching is partnership (defined as an alliance, not a legal business partnership) between the Coach and the Client in a thought-provoking and creative process that inspires the client to maximize personal and professional potential. It is designed to facilitate the creation/development of personal, professional or business goals and to develop and carry out a strategy/plan for achieving those goals.
+        
+        
+        
+        
+
+        <p>★<span id="men">Code of Ethics</span><br>
+            Coach agrees to maintain the ethics and standards of behavior established by the International Coach Federation (ICF) that can be found at <a href="https://coachingfederation.org/ethics/code-of-ethics." target="_blank">HERE</a>. It is recommended that you review the ICF Code of Ethics and the applicable standards of behavior.  </p>
+        
+<br>
+       <p>★<span id="men">You can depend on your Coach to: </span><br>
+        <ul>
+            <li> Be an encouraging guide dedicated to your success and helping you find the treasure within you.</li>
+            <li>Create and maintain a safe and trusting environment.</li>
+            <li>Challenge you to open your mind to new possibilities, delve into every option to grow your success.</li>
+            <li>Listen to you, challenge you to expand your thoughts and feelings to ensure we get the best out of you.</li>
+            <li>Maintain confidentiality with your words and information.</li>
+          </ul>  
+    </p>
+
+
+
+    <br>
+       <p>★<span id="men">As the coachee, you commit to:</span><br>
+
+        <ul>
+            <li>Cultivate honesty within yourself, take an open and unguarded inventory of your current state before defining your future state.</li>
+            <li>Remain open to discovering new possibilities for yourself in your journey towards a more fulfilling life.</li>
+            <li>Commit to the objectives you and your Coach outline and agree to a reasonable and achievable path to your identified goals.</li>
+            <li>Take full ownership for your commitments and the timelines you and your Coach agree to.</li>
+            <li>Communicate honestly, openly, respectfully and directly.</li>
+          </ul>  
+    </p>
+        
+
+
+    <p>★<span id="men">Confidentiality</span><br>
+        Your personal information will be kept strictly confidential, including your session notes/recording unless information shared could cause harm to yourself or others or lead to legal proceedings as your Coach has a responsibility to report such things.  You also understand that you have agreed to participate in your coaching training and therefore these sessions may be reviewed for training purposes by a representative of Pure Spiritual Intelligence / Pure Coach trainer (in which case, your name will be hidden).</p>
+
+
+    <p>★<span id="men">Acknowledgement</span><br>
+        I acknowledge that coaching does not involve the diagnosis or treatment of mental disorders as defined by the American Psychiatric Association and that coaching is not to be used as a substitute for counseling, psychotherapy, psychoanalysis, mental health care, substance abuse treatment, or other professional advice by legal, medical or other qualified professionals and that is it my responsibility to seek such independent professional guidance as needed. 
+        If you are currently under the care of a mental health professional, it is recommended that you promptly inform the mental health care provider of the nature and extent of the coaching relationship agreed upon by you and the Coach. </p>
+
+     <p>★<span id="men">Certification</span><br>
+        I hereby certify that I do not suffer from any physical or mental disability that might affect my participation in the coaching process and, if I have any substance abuse problem or mental illness, I have consulted with my physician and other health care professional and been advised that I may participate in the coaching process without risk.  I agree that if there is any change in the representation, I will promptly advise the coach. </p>
+                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+   
+      </div>
+    
+    </div>
+   
+   
+   
+<br>         
+            <input type="checkbox" id="cb" name="notify" id="checkme" required> <span style="color: red;" for="feedback-notify" >I have read and agreed to the terms and conditions listed in this form</span>
+           
+            <br> <br>
+        <button type="submit" onclick="myFunction()" id="submit" data-toggle="modal" data-target=".bd-example-modal-lg">Submit your application</button>
+
 
  
     </form>
@@ -326,18 +418,20 @@
 <script>
 
     $("#submit").click(function(){
-
     var fname = $("#fname").val();
     var lname = $("#lname").val();
-    var email = $("#email").val();
+    var email = $('#Email').val();
     var phone = $("#phone").val();
     var country = $("#avail").val();
     var availa = $("#cal1").val();
     var tz = $("#cal2").val();
     var about = $("#bio4").val();
+  
+
 
     
-    if (fname ==''||lname ==''||email ==''||phone ==''||country ==''||availa==''||tz==''||about==''){
+    if (fname ==''||lname ==''||email =='' ||phone ==''||country ==''||availa==''||tz==''||about=='') {
+       
         swal({
   title: "Fields Empty!",
   text: "Please check the missing field!",
@@ -356,6 +450,44 @@
 });
 }})
 
+
+$(document).ready(function() {
+
+var $submit = $("#submit").hide(),
+    $cbs = $("#cb").click(function() {
+        $submit.toggle( $cbs.is(":checked") );
+        
+    });
+
+
+});
+
+
+// Get the modal
+var ebModal = document.getElementById('mySizeChartModal');
+
+// Get the button that opens the modal
+var ebBtn = document.getElementById("mySizeChart");
+
+// Get the <span> element that closes the modal
+var ebSpan = document.getElementsByClassName("ebcf_close")[0];
+
+// When the user clicks the button, open the modal 
+ebBtn.onclick = function() {
+    ebModal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+ebSpan.onclick = function() {
+    ebModal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == ebModal) {
+        ebModal.style.display = "none";
+    }
+}
 
 
 
